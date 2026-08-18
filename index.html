@@ -93,6 +93,12 @@
     animation: rise 0.7s 0.05s ease-out forwards;
   }
 
+  .hero-flex{
+    display: block;
+  }
+  .hero-brand{ }
+  .hero-copy{ }
+
   .logo-wrap{
     display: flex;
     justify-content: center;
@@ -239,6 +245,7 @@
     text-decoration: none;
     font-weight: 700;
     font-size: 15.5px;
+    white-space: nowrap;
     padding: 16px 18px;
     border-radius: 999px;
     min-height: 52px;
@@ -300,44 +307,11 @@
     .cta{ font-size: 14.5px; padding: 14px; }
   }
 
-  /* ---------- Desktop / wide viewport ---------- */
-  @media (min-width: 860px){
-    .card{ max-width: 980px; padding: clamp(56px, 6vw, 88px) 48px clamp(52px, 6vw, 72px); }
-    .lower{ max-width: 980px; padding: clamp(48px, 6vw, 72px) 48px clamp(56px, 6vw, 80px); }
-
-    .kicker{ text-align: left; margin: 0 0 22px; }
-
-    .hero-flex{
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 64px;
-    }
-    .hero-brand{ flex: none; }
-    .hero-copy{ flex: 1 1 auto; min-width: 0; }
-
-    .logo-wrap{ justify-content: flex-start; margin-bottom: 0; }
-    .logo-wrap img{ width: 220px; }
-
-    .tagline{
-      text-align: left;
-      font-size: clamp(24px, 2.3vw, 30px);
-      max-width: 22ch;
-    }
-    .flow-divider{ margin: 26px 0 24px; }
-
-    .about{ text-align: left; margin: 0 0 26px; max-width: 48ch; }
-
-    .chips{ justify-content: flex-start; margin-bottom: 34px; }
-
-    .ctas{ flex-direction: row; margin-bottom: 0; }
-    .cta{ flex: 0 0 auto; padding-left: 26px; padding-right: 26px; }
-
-    .gallery{ gap: 16px; }
-    .gallery-cap{ text-align: left; margin: 16px 0 40px; }
-
-    .foot{ text-align: left; display: flex; align-items: baseline; justify-content: space-between; gap: 24px; }
-    .foot-hand{ margin: 0; }
+  /* ---------- Larger screens: same single-column layout, just a bit more room ---------- */
+  @media (min-width: 700px){
+    .card{ max-width: 560px; padding: clamp(40px, 6vw, 64px) 32px clamp(32px, 6vw, 48px); }
+    .lower{ max-width: 700px; padding: clamp(32px, 6vw, 44px) 32px clamp(36px, 6vw, 56px); }
+    .gallery{ gap: 14px; }
   }
 </style>
 
